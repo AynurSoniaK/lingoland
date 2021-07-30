@@ -1,0 +1,59 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	| Dashboard | Speech
+{% endblock %}
+
+{% block body %}
+
+<h1 class="h1_profil col-md-12 d-flex justify-content">Tous les speech</h1>
+
+	{% if lesson %}
+
+		<div class="col-md-10 mx-auto">
+		<table class="table table-hover text-center">
+
+			<thead class="bg-dark text-white">
+
+				<tr>
+
+					<th>Nom</th>
+                    <th>Objectifs pédagogiques</th>
+                    <th>Voir</th>
+
+				</tr>
+
+
+			</thead>
+
+			<tbody>
+
+				{% for lessons in lesson %}
+					<tr class="align-middle">
+
+						<td>{{ lessons.title }}</td>
+                        <td>{{ lessons.objectifs }}</td>
+						<td>
+							<a href="{{ asset('/lessons/' ~ lessons.lesson) }}">
+
+								<img src="{{ asset('images/eye-fill.svg') }}" alt="voir la leçon" class="img-fluid">
+							</a>
+						</td>
+
+
+					</tr>
+				{% endfor %}
+
+			</tbody>
+
+
+		</table>
+
+
+	{% else %}
+		<h3 class="text-danger fst-italic text-center mt-3">Il n'y a aucune leçon pour le moment</h3>
+	{% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} | Dashboard | 
+
+{% if modification %}
+    Modifier la langue "{{ language.name }}"
+{% else %}
+    Ajouter une langue
+{% endif %}
+
+
+
+{% endblock %}
+
+
+
+
+{% block body %}
+{% if modification %}
+    <h1 class="h1_profil2 col-md-12 d-flex">Modifier la langue "{{ language.name }}"</h1>
+{% else %}
+    <h1 class="h1_profil2 col-md-12 d-flex">Ajouter une langue</h1>
+{% endif %}
+
+
+
+    <div class="col-md-5 mx-auto">
+
+        {{ form_start(formLanguage) }}
+
+            {{ form_row(formLanguage.name) }}
+        {{ form_end(formLanguage) }}
+
+        </div>
+        <div class="col-md-12 d-flex justify-content-center">
+            <input type="submit" 
+
+            {% if modification %}
+              class="btn btn-success2"  value="modifier"
+            {% else %}
+              class="btn btn-success"  value="Ajouter"
+            {% endif %} 
+            > 
+            
+            
+
+
+
+    </div>
+    
+
+{% endblock %}
+

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirm email
+{% endblock %}
+
+
+{% block body %}
+	<div class="container-fluid d-flex justify-content-center">
+			<div>
+            <h1>Inscription enregistrée !</h1>
+			<p>Un message vient de vous être envoyé sur votre messagerie. </p>
+            <p>
+				Veuillez vérifier votre adresse email pour pouvoir vous connecter.
+			</p>
+            <img src="{{ asset('images/confirm_email.svg')}}" class="img-fluid" alt="Confirm_email">
+            </div>
+	</div>
+{% endblock %}

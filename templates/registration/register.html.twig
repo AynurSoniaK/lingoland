@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block body %}
+	<div class="col-md-12 mx-auto">
+		{% for flashError in app.flashes('verify_email_error') %}
+			<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+		{% endfor %}
+
+		<div class="container">
+			<h1 class="text-center">Inscription</h1><br>
+
+			{{ form_start(registrationForm, {attr: {novalidate: 'novalidate'}}) }}
+			<div class="row">
+				<div class="col-md-4">{{ form_row(registrationForm.email) }}</div>
+				<div class="col-md-4">{{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}</div>
+				<div class="col-md-4">
+					{{ form_row(registrationForm.genre) }}
+				</div>
+
+				{{ form_start(registrationForm) }}
+
+				<div class="row">
+
+					<div class="col-md-4">
+						{{ form_row(registrationForm.name) }}
+					</div>
+					<div class="col-md-4">
+						{{ form_row(registrationForm.age) }}
+					</div>
+					<div class="col-md-4">
+						{{ form_row(registrationForm.city) }}
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					{{ form_row(registrationForm.introduction) }}
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						{{ form_row(registrationForm.language) }}
+					</div>
+					<div class="col-md-4">
+						{{ form_row(registrationForm.languageLearned) }}
+					</div>
+					<div class="col-md-4">
+						{{ form_row(registrationForm.communication) }}
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						{{ form_row(registrationForm.availibility) }}
+					</div>
+					<div class="col-md-4">
+						{{ form_row(registrationForm.frequency) }}
+					</div>
+					<div class="col-md-4">
+						{{ form_row(registrationForm.hobby) }}
+					</div>
+				</div>
+				<div class="col-md-6 text-center">
+					{{ form_row(registrationForm.photo) }}
+				</div>
+
+				<div>{{ form_row(registrationForm.agreeTerms) }}</div>
+
+			</div>
+			<div class="col-md-12 text-center">
+				<input type="submit" value="Créer mon profil" class="btn btn-success"></div>
+		</div>
+		{{ form_end(registrationForm) }}
+	{% endblock %}

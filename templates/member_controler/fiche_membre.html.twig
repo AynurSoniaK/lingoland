@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Profil de {{ user.name |title }}
+{% endblock %}
+
+{% block body %}
+
+	<div class="col-md-12 mx-auto">
+
+		<h1 class="h1_profil col-md-6 d-flex justify-content">Profil de
+			{{ user.name|title }}
+		</h1>
+
+		<div class="row">
+			<div class="col-md-6 mx-auto">
+				<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">Nom :
+						{{ user.name|title}}
+					</li>
+					<li class="list-group-item">Genre :
+						{{ user.genre|title}}
+					</li>
+					<li class="list-group-item">Age :
+						{{ user.age }}
+					</li>
+					<li class="list-group-item">Ville :
+						{{ user.city|title }}
+					</li>
+					<li class="list-group-item">Langue(s) :
+						{% for languages in user.language %}
+							{{ languages|replace({"\n":' '}) }}{% if not loop.last %},{% endif %}
+						{% endfor %}
+					</li>
+					<li class="list-group-item">Langue(s) apprise(s):
+						{% for languageslearned in user.languageLearned %}
+							{{ languageslearned|replace({"\n":' ', "\r":' '}) }}
+							{% if not loop.last %},{% endif %}	
+						{% endfor %}
+					</li>
+					<li class="list-group-item">Fréquence:
+						{{ user.frequency|replace({"\n":' ', "\r":' '}) }}
+					</li>
+					<li class="list-group-item">Disponibilités:
+						{% for dispo in user.availibility %}
+								{{ dispo|replace({"\n":' ', "\r":' '}) }}{% if not loop.last %},{% endif %}
+						{% endfor %}
+					</li>
+					<li class="list-group-item">Loisirs:
+						{% for hobbies in user.hobby %}
+								{{ hobbies|replace({"\n":' ', "\r":' '}) }}{% if not loop.last %},{% endif %}
+						{% endfor %}
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6 mx-auto ">
+				<li class="list-group-item">
+					<img class="photo_membre img-fluid" src="{{ asset('images/uploadphotos/' ~ user.photo) }}">
+				</li>
+
+				<div class="row d-flex justify-content-center col-md-12">
+
+					<a class="col-md-6 btn btn-success" href="{{path('send', {'id' : user.id })}}">Contacter
+						{{ user.name|title }}</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tableau de bord
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="container">
+		<h1 class="h1_profil col-md-12 d-flex justify-content">Tableau de bord</h1>
+		<div class="row mx-auto">
+			<div class="col dash justify-content-center">
+				<button>
+					<span>
+						<i class="fas fa-language fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('language_afficher') }}">Langues
+					</a>
+					<p>Total :
+						{{ nb_lang }}</p>
+
+				</button>
+			</div>
+			<div class="col mx-auto dash">
+				<button class="justify-content-center">
+					<span>
+						<i class="fas fa-chalkboard-teacher fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('languagelearned_afficher') }}">Langues étrangères
+					</a>
+					<p>
+						Total :
+						{{nb_langL}}</p>
+				</button>
+			</div>
+			<div class="col mx-auto dash">
+				<button>
+					<span>
+						<i class="fas fa-stopwatch-20 fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('frequency_afficher') }}">Fréquences</a>
+
+					<p>
+						Total :
+						{{nb_freq}}</p>
+
+				</button>
+			</div>
+			<div class="col mx-auto dash">
+				<button>
+					<span>
+						<i class="fas fa-comments fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('communication_afficher') }}">Communications</a>
+					<p>
+						Total :
+						{{nb_com}}</p>
+
+				</button>
+			</div>
+		</div>
+		<div class="row mx-auto">
+			<div class="col dash justify-content-center">
+				<button>
+					<span>
+						<i class="fas fa-heart fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('hobbies_afficher') }}">Loisirs</a>
+
+					<p>Total :
+						{{ nb_hob }}</p>
+
+				</button>
+			</div>
+			<div class="col mx-auto dash">
+				<button class="justify-content-center">
+					<span>
+						<i class="far fa-calendar-check fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('availibility_afficher') }}">Disponibilités</a>
+
+					<p>
+						Total :
+						{{nb_avail}}</p>
+				</button>
+			</div>
+			<div class="col mx-auto dash">
+				<button>
+					<span>
+						<i class="fas fa-users fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('gestion_members') }}">Membres
+					</a>
+					<p>
+						Total :
+						{{nb_user}}</p>
+
+				</button>
+			</div>
+			<div class="col mx-auto dash">
+				<button>
+					<span>
+						<i class="fas fa-book fa-3x" style="color:#5A5A5A"></i>
+					</span>
+					<a class="dropdown-item" href="{{ path('lessons_afficher') }}">Leçons
+					</a>
+					<p>
+						Total :
+						{{nb_less}}</p>
+
+				</button>
+			</div>
+		</div>
+	</div>
+{% endblock %}

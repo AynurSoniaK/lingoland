@@ -1,0 +1,58 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} | Dashboard | 
+
+{% if modification %}
+    Modification {{ level.name }}
+{% else %}
+    Ajouter un niveau
+{% endif %}
+
+
+
+{% endblock %}
+
+
+
+{% block h1 %}
+
+{% if modification %}
+    Modification {{ level.name }}
+{% else %}
+    Ajouter un niveau
+{% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="row justify-content-end">
+        <a class='btn btn-info p-2 col-md-3' href="{{ path('level_afficher') }}">Retour</a>
+    </div>
+
+
+
+    <div class="col-md-4 mx-auto">
+
+        {{ form_start(formLevel) }}
+
+            {{ form_row(formLevel.name) }}
+
+            <input type="submit" 
+
+            {% if modification %}
+              class="btn btn-danger col-md-12 mt-3"  value="modifier"
+            {% else %}
+              class="btn btn-warning col-md-12 mt-3"  value="Ajouter"
+            {% endif %} 
+            > 
+            
+            
+
+        {{ form_end(formLevel) }}
+
+    </div>
+    
+
+{% endblock %}
+

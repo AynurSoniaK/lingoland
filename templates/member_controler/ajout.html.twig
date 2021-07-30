@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer votre profil{% endblock %}
+
+{% block body %}
+    <div class="col-md-6 mx-auto">
+    <h1>Créer votre profil</h1>
+
+        {{ form_start(formProfil) }}
+        <div class="mb-3">
+            <div class="row">
+            <div class="col">
+            {{ form_row(formProfil.name) }}</div><br>
+
+            <div class="col">
+            <div class="col">
+            {{ form_row(formProfil.genre) }}</div><br>
+
+            <div class="col">
+            {{ form_row(formProfil.age) }}</div><br>
+
+            <div class="col">
+            {{ form_row(formProfil.city) }}</div><br></div>
+
+            {{ form_row(formProfil.introduction) }}<br>
+        
+        <div class="row">
+            <div class="col">
+            {{ form_row(formProfil.languages) }}<br></div>
+            <div class="col">
+            {{ form_row(formProfil.languageLearneds) }}</div><br>
+            <div class="col">
+            {{ form_row(formProfil.level) }}</div><br></div>
+
+            <div class="row">
+            <div class="col">
+            {{ form_row(formProfil.availibilities) }}
+</div><br>
+            <div class="col">
+            {{ form_row(formProfil.communications) }}
+</div><br>
+            <div class="row">
+            <div class="col">
+            {{ form_row(formProfil.hobbies) }}
+</div><br>
+            <div class="col">
+            {{ form_row(formProfil.frequencies) }}
+</div><br></div>
+            <input type="submit" value="Inscrire" class="btn btn-success mt-3 col-md-12">
+
+        {{ form_end(formProfil) }}
+    
+    </div>
+{% endblock %}

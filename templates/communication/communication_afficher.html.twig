@@ -1,0 +1,75 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} | Dashboard | Gestion des communications{% endblock %}
+
+{% block body %}
+	<h1 class="h1_profil col-md-12 d-flex justify-content">Gestion des communications</h1>
+
+    {% for notification in app.flashes('success') %}
+            <div class="alert alert-success col-md-6 mx-auto text-center disparition">{{ notification }}</div>
+    {% endfor %}
+       
+    {% if communications %} 
+        
+		<div class="col-md-10 mx-auto">
+		<table class="table table-hover text-center">
+
+			<thead class="bg-dark text-white">
+
+                <tr>
+                
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                
+                </tr>
+            
+            
+            </thead>
+
+
+            <tbody>
+            
+                {% for communication in communications  %}
+                    <tr class="align-middle">
+
+                        <td >{{ communication.id }}</td>
+                        <td>{{ communication.name }}</td>
+                    
+
+                        <td>
+                            <a href="{{ path('communication_modifier' , {"id" : communication.id }  ) }}" >
+                                <img src="{{ asset('images/pencil-square.svg') }}" alt="icône de modification" class="img-fluid">
+                            </a>
+                        </td>
+
+
+
+                        <td>
+                            <a href="{{ path('communication_supprimer' , {"id" : communication.id }  ) }}" onclick="return confirm('Confirmez-vous la suppression de la communication ?')">
+                                <img src="{{ asset('images/trash.svg') }}" alt="icône de suppression" class="img-fluid">
+                            </a>
+                        </td>
+                    
+                    
+                    
+                    </tr>
+                {% endfor %}
+            
+            
+            </tbody>
+        
+        
+        </table>
+
+
+    {% else %}
+		<h3 class="text-danger fst-italic text-center mt-3">Il n'y a aucune communication pour le moment</h3>
+    {% endif %}
+</div>
+		<div class="d-flex justify-content-end col-md-10 mx-auto">
+        <a class='col-md-3 me-0  btn btn-success' href="{{ path('communication_ajouter') }}">Ajouter une communication</a>
+    </div>
+
+{% endblock %}

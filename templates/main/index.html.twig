@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lingoland : maîtriser une langue par la conversation
+{% endblock %}
+
+{% block body %}
+
+	<div class="container-fluid mx-auto p-0">
+		<div class="main_ban img-fluid">
+			<div class="row align-items-center mx-auto">
+				<div class="col-md-6 textbanner">
+					<h1>Boost ton apprentissage</h1>
+					<h2>Pratique une langue étrangère avec des natifs</h2>
+					<div class="d-flex justify-content-center ">
+						<ul class="text-left">
+							<li>
+								<i class="far fa-check-circle color-99CC5B">&nbsp</i>
+								Inscription gratuite</li>
+							<li>
+								<i class="far fa-check-circle">&nbsp</i>
+								Supports de communication disponibles</li>
+							<li>
+								<i class="far fa-check-circle">&nbsp</i>
+								Apprentissage par la conversation</li>
+						</ul>
+					</div>
+					<button type="button" class="btn btn-success">
+						<a href="{{path('app_register')}}">Je m'inscris</a>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h2 class="textbanner">Pourquoi faire un échange linguistique?</h2>
+	<div class="card-deck justify-content-center">
+		<div class="card col-4 col-sm-3 border-0">
+			<img src="{{ asset('images/discussion.jpg')}}" class="card-img-top img-fluid" alt="Simplicité">
+			<div class="card-body">
+				<h3 class="card-title text-center text-success">Simplicité</h3>
+				<p class="card-text text-center">Pratiquez une langue étrangère n'importe où et quand vous voulez.</p>
+				<p class="card-text text-center">Vous en découvrez plus sur la culture du pays dont vous souhaitez apprendre la langue.</p>
+
+			</div>
+		</div>
+		<div class="card col-4 col-sm-3 border-0">
+			<img src="{{ asset('images/discussion2.jpg')}}" class="card-img-top img-fluid" alt="Authenticité">
+			<div class="card-body">
+				<h3 class="card-title text-center text-success ">Authenticité</h3>
+				<p class="card-text text-center">Bénéficiez d’une interaction représentative de la vie quotidienne.</p>
+				<p class="card-text text-center">Vos partenaires sont des locuteurs natifs.</p>
+			</div>
+		</div>
+		<div class="card col-4 col-sm-3 border-0">
+			<img src="{{ asset('images/rencontres.jpg')}}" class="card-img-top img-fluid" alt="Rencontres">
+			<div class="card-body">
+				<h3 class="card-title text-center text-success ">Rencontres</h3>
+				<p class="card-text text-center">Rencontrez de nouvelles personnes à travers le monde.</p>
+				<p class="card-text text-center">Des personnes motivées, aux objectifs similaires.</p>
+			</div>
+		</div>
+	</div>
+	<h2 class="textbanner">Lingoland, comment ça marche?</h2>
+	<div class="card-deck m-3">
+		<div class="card border-0">
+			<img src="{{ asset('images/person.svg')}}" class="card-img-top" alt="register-person">
+			<div class="card-body textbanner">
+				<h3 class="card-title text-success">Je m'inscris gratuitement</h3>
+				<p class="card-text">Pour devenir membre, il suffit de remplir le formulaire d'inscription qui permettra à chacun de mieux cibler ses recherches.</p>
+			</div>
+		</div>
+		<div class="card border-0">
+			<img src="{{ asset('images/search.svg')}}" class="card-img-top" alt="search-member">
+			<div class="card-body textbanner">
+				<h3 class="card-title text-success">Je cherche un partenaire</h3>
+				<p class="card-text">Grâce aux informations du formulaire, vous pourrez chercher des partenaires de langue qui vous correspondent</p>
+			</div>
+		</div>
+		<div class="card border-0">
+			<img src="{{ asset('images/envelope.svg')}}" class="card-img-top" alt="contact">
+			<div class="card-body textbanner">
+				<h3 class="card-title text-success">Je le contacte pour échanger</h3>
+				<p class="card-text">Une fois que vous aurez trouvé un membre qui vous correspond, vous pourrez le contacter pour devenir partenaire de langue</p>
+			</div>
+		</div>
+		<div class="card border-0">
+			<img src="{{ asset('images/card-text.svg')}}" class="card-img-top" alt="contact">
+			<div class="card-body textbanner">
+				<h3 class="card-title text-success">J'utilise le matériel pédagogique</h3>
+				<p class="card-text">Une fois que vous aurez trouvé un membre qui vous correspond, vous pourrez le contacter pour devenir partenaire de langue</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid banner">
+		<h2 class="textbanner">Des supports de communication disponibles</h2>
+		<div class="row justify-content-center">
+			<div class="text-center">
+				<img src="{{ asset('images/france.png')}}" class="flag">
+				<img src="{{ asset('images/united-kingdom.png')}}" class="flag">
+				<img src="{{ asset('images/germany.png')}}" class="flag">
+				<img src="{{ asset('images/spain.png')}}" class="flag">
+			</div>
+		</div>
+		<div class="textbanner">
+			<h3>Pour tous les niveaux</h3>
+			<button type="button" class="btn btn-secondary" disabled>A1</button>
+			<button type="button" class="btn btn-secondary" disabled>A2</button>
+			<button type="button" class="btn btn-secondary" disabled>B1</button>
+			<button type="button" class="btn btn-secondary" disabled>B2</button>
+			<button type="button" class="btn btn-secondary" disabled>C1</button>
+			<button type="button" class="btn btn-secondary" disabled>C2</button>
+			<div class="row justify-content-center">
+				<p>
+					<i class="fas fa-angle-double-right"></i>
+					Progression rapide</p>
+				<p>
+					<i class="fas fa-angle-double-right"></i>
+					Apprentissage structuré
+				</p>
+				<p>
+					<i class="fas fa-angle-double-right"></i>
+					Solidarité entre apprenant</p>
+			</div>
+			<button type="button" class="btn btn-success">
+				<a href="{{path('app_register')}}">Voir le matériel</a>
+			</button>
+		</div>
+	</div>
+
+</div>{% endblock %}

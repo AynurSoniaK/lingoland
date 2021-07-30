@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier profil
+{% endblock %}
+
+{% block body %}
+
+	<h1>Modifier profil</h1>
+
+	<div class="col-md-12 mx-auto">
+
+		{{ form_start(modifier_profilForm) }}
+
+		<div class="row">
+
+			<div class="col-md-4">
+				{{ form_row(modifier_profilForm.name) }}
+			</div>
+			<div class="col-md-4">
+				{{ form_row(modifier_profilForm.genre) }}
+			</div>
+			<div class="col-md-4">
+				{{ form_row(modifier_profilForm.age) }}
+			</div>
+			<div class="col-md-4">
+				{{ form_row(modifier_profilForm.city) }}
+			</div>
+		</div>
+
+		<div class="col-md-12">
+			{{ form_row(modifier_profilForm.introduction) }}
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				{{ form_row(modifier_profilForm.language) }}
+			</div>
+			<div class="col-md-4">
+				{{ form_row(modifier_profilForm.languageLearned) }}
+				</div>
+				<div class="col-md-4">
+					{{ form_row(modifier_profilForm.communication) }}
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					{{ form_row(modifier_profilForm.availibility) }}
+				</div>
+				<div class="col-md-4">
+					{{ form_row(modifier_profilForm.frequency) }}
+				</div>
+				<div class="col-md-4">
+					{{ form_row(modifier_profilForm.hobby) }}
+				</div>
+			</div>
+			{{ form_row(modifier_profilForm.photo,{ 'attr' : {"onChange" : "loadFile(event)"}  }  ) }}
+
+			<div class="col-md-12 text-center">
+
+				<img class="photo_membre img-fluid" {% if app.user.photo is not empty %} src="{{ asset('images/uploadphotos/' ~ app.user.photo) }}" {% endif %}>
+
+			</div>
+		</div>
+
+
+		<button class="btn btn-success" type="submit">Modifier</button>
+		{{ form_end(modifier_profilForm) }}
+	{% endblock %}
+	{% block javascripts %}
+
+	<script>
+
+		var loadFile = function(event){
+					            var image = document.getElementById('photo');
+					
+					            image.src = URL.createObjectURL(event.target.files[0]);
+					        };
+					
+					{% endblock %}

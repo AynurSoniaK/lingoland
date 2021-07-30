@@ -1,0 +1,75 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	| Dashboard | Gestion des langues étrangères
+{% endblock %}
+
+{% block body %}
+	<h1 class="h1_profil col-md-12 d-flex justify-content">Gestion des langues étrangères</h1>
+
+	{% for notification in app.flashes('success') %}
+		<div class="alert alert-success col-ms-3 mx-auto text-center disparition">{{ notification }}</div>
+	{% endfor %}
+
+	{% if languageLearneds %}
+
+		<div class="col-md-10 mx-auto">
+		<table class="table table-hover text-center">
+
+			<thead class="bg-dark text-white">
+
+				<tr>
+
+					<th>ID</th>
+					<th>Nom</th>
+					<th>Modifier</th>
+					<th>Supprimer</th>
+
+				</tr>
+
+
+			</thead>
+
+
+			<tbody>
+
+				{% for languageLearned in languageLearneds %}
+					<tr class="align-middle">
+
+						<td>{{ languageLearned.id }}</td>
+						<td>{{ languageLearned.name }}</td>
+
+
+						<td>
+							<a href="{{ path('languagelearned_modifier' , {"id" : languageLearned.id } ) }}">
+								<img src="{{ asset('images/pencil-square.svg') }}" alt="icône de modification" class="img-fluid">
+							</a>
+						</td>
+
+
+						<td>
+							<a href="{{ path('languagelearned_supprimer' , {"id" : languageLearned.id } ) }}" onclick="return confirm('Confirmez-vous la suppression de la langue apprise ?')">
+								<img src="{{ asset('images/trash.svg') }}" alt="icône de suppression" class="img-fluid">
+							</a>
+						</td>
+
+
+					</tr>
+				{% endfor %}
+
+			</tbody>
+
+
+		</table>
+
+
+	{% else %}
+		<h3 class="text-danger fst-italic text-center mt-3">Il n'y a aucune langue étrangère pour le moment</h3>
+	{% endif %}
+</div>
+		<div class="d-flex justify-content-end col-md-10 mx-auto">
+        <a class='col-md-3 me-0  btn btn-success' href="{{ path('languagelearned_ajouter') }}">Ajouter une langue étrangère</a>
+		</div>
+{% endblock %}
+

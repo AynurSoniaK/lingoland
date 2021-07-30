@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	| Dashboard |
+
+	{% if modification %}
+		Modifier la leçon "{{ lessons.title }}"
+		{{ lessons.title }}
+	{% else %}
+		Ajouter une leçon
+	{% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+	{% if modification %}
+		<h1 class="h1_profil2 col-md-12 d-flex">Modifier la leçon
+			"{{ lessons.title }}"</h1>
+	{% else %}
+		<h1 class="h1_profil col-md-12 d-flex">Ajouter une leçon</h1>
+	{% endif %}
+
+	<div class="col-md-5 mx-auto">
+
+		{{ form_start(formLessons) }}
+
+		{{ form_row(formLessons.title) }}
+		{{ form_row(formLessons.objectifs) }}
+		{{ form_row(formLessons.lesson) }}
+
+		{{ form_end(formLessons) }}
+
+	</div>
+
+        <div class="col-md-12 d-flex justify-content-center">
+		
+        <input type="submit" 
+
+        {% if modification %} 
+        class="btn btn-success2" value="Modifier" 
+        {% else %} 
+        
+        class="btn btn-success" value="Ajouter" 
+        {% endif %}
+        >
+        
+        </div>
+    
+{% endblock %}
