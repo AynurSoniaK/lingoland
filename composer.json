@@ -86,9 +86,7 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "requirements-checker": "script",
-            "vendor/bin/requirements-checker": "php-script"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -96,9 +94,9 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "compile":[
+        "compile": [
             "php bin/console doctrine:migrations:migrate"
-        ]
+          ]
     },
     "conflict": {
         "symfony/symfony": "*"
