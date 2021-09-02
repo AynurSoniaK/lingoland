@@ -39,6 +39,10 @@ h2{
     font-family: Lato;
 }
 
+.nav-link a:hover{
+    color:#F49819 !important;
+}
+
 .main_ban{
     background-image:url(/images/6.png);
     background-size:cover;
@@ -166,7 +170,7 @@ img.flag{
 
 .dash a:hover{
     text-decoration: none;
-    color:goldenrod;
+    color:#F49819;
     background-color: #FFFFFF;
 }
 
@@ -201,3 +205,8 @@ img.flag{
     border-radius:50px !important;
     padding: 10px 20px !important;
 }
+
+.dropdown-menu a:hover {
+    background-color:#FFFFFF !important;
+    color:#F49819 !important;
+  }
