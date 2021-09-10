@@ -46,7 +46,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/lessons", name="all_lessons")
+     * @Route("/lessons/", name="all_lessons")
      */
     public function lessons_afficher(LessonsRepository $repoLessons): Response
     {
