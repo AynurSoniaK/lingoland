@@ -17,7 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class LessonsController extends AbstractController
 {
     /**
-     * @Route("/lessons", name="lessons")
+     * @Route("/lessons/", name="lessons")
      */
     public function index(): Response
     {
