@@ -40,7 +40,7 @@ security:
         - { path: ^/confirm_email, roles: IS_ANONYMOUS }
         - { path: ^/login, roles: IS_ANONYMOUS }
         - { path: ^/messages, roles: IS_AUTHENTICATED_FULLY }
-        - { path: ^/lessons/, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/speech, roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/membres, roles: IS_AUTHENTICATED_FULLY }
 
 
