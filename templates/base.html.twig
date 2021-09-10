@@ -144,7 +144,7 @@ shrink-to-fit=no">
 											<a class="dropdown-item" href="{{path('member_profile')}}">Profil</a>
 										</li>
 										<li>
-											<a class="dropdown-item" href="gerer_annonces">Gérer mon profil</a>
+											<a class="dropdown-item" href="{{path('profil_modifier',{'id' : app.user.id })}}">Gérer mon profil</a>
 										</li>
 										<li><hr class="dropdown-divider"></li>
 										<li>
