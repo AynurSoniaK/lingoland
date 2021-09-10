@@ -16,15 +16,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  */
 class LessonsController extends AbstractController
 {
-    /**
-     * @Route("/speech", name="lessons")
-     */
-    public function index(): Response
-    {
-        return $this->render('lessons/index.html.twig', [
-            'controller_name' => 'LessonsController',
-        ]);
-    }
 
     /**
      * @Route("/gestion_lessons", name="lessons_afficher")
