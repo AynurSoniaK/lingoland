@@ -1,5 +1,4 @@
 #!/usr/bin/env php
-umask(0000);
 <?php
 
 use App\Kernel;
