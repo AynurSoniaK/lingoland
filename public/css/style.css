@@ -146,6 +146,11 @@ h6{
 }
 li.nav-item{
     padding:0px !important;
+    text-decoration: none !important;
+}
+
+a.nav-item{
+    text-decoration: none !important;
 }
 
 legend,label{
@@ -204,6 +209,10 @@ img.flag{
     border-color:#22994C !important;
     border-radius:50px !important;
     padding: 10px 20px !important;
+}
+
+.far {
+    padding-right: 20px;
 }
 
 .dropdown-menu a:hover {
