@@ -9,7 +9,7 @@
 	<h1 class="h1_profil col-md-12 d-flex justify-content">Gestion des leçons</h1>
 
 	{% for notification in app.flashes('success') %}
-		<div class="alert alert-success col-ms-3 mx-auto text-center disparition">{{ notification }}</div>
+		<div class="alert alert-success col-md-10 mx-auto text-center disparition">{{ notification }}</div>
 	{% endfor %}
 
 	{% if lesson %}
