@@ -134,14 +134,14 @@ h6{
 .register{
     border-radius: 50px;
     border-color: #3007AF;
-    padding: 10px 20px;
+    margin: 5px;
     color: #3007AF;
 }
 
 .login{
     border-radius: 50px;
     border-color: #3007AF;
-    padding: 10px 20px;
+    margin: 5px;
     color: #3007AF;
 }
 li.nav-item{
@@ -151,6 +151,10 @@ li.nav-item{
 
 a.nav-item{
     text-decoration: none !important;
+}
+
+ul.login a:hover{
+    color:red !important;
 }
 
 legend,label{
