@@ -30,7 +30,7 @@
 		{{ form_row(formLessons.objectifs) }}
 		{{ form_row(formLessons.lesson) }}
 
-		{{ form_end(formLessons) }}
+		
 
 	</div>
 
@@ -45,7 +45,8 @@
         class="btn btn-success" value="Ajouter" 
         {% endif %}
         >
-        
+        {{ form_end(formLessons) }}
+		
         </div>
     
 {% endblock %}

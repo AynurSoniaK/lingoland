@@ -27,7 +27,7 @@
             {{ form_row(formHobbies.name) }}
 
         
-        {{ form_end(formHobbies) }}
+        
 
         </div>
 
@@ -38,7 +38,8 @@
             {% else %}
               class="btn btn-success"  value="Ajouter"
             {% endif %} 
-            > 
+            >
+            {{ form_end(formHobbies) }}
 
     </div>
     
