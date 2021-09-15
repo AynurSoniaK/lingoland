@@ -7,10 +7,10 @@
 	<section class="container">
 		<div class="row">
 			<div class="col">
-				<h1>Résumé de la messagerie</h1>
+				<h1 class="messagerie">Résumé de la messagerie</h1>
 				<p>Reçus : {{ app.user.received|length }}</p>
 				<p>Envoyés : {{ app.user.sent|length }}</p>
-				<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+				<a class="btn btn-success" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 					Voir mes dossiers
 				</a>
                 {#<a href="{{path("send")}}" class="btn btn-primary">Envoyer un message</a>#}

@@ -7,17 +7,16 @@
 <section class="container">
 	<div class="row">
 		<div class="col-12">
-			<h1>{{ message.title }}</h1>
+			<h1 class="messagerie">{{ message.title }}</h1>
 			<p>Message de
 				{{ message.sender.name|title }}</p>
 			<p>Le
 				{{ message.createdAt|date }}</p>
 			<div>{{ message.message }}</div>
-			<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+			<a class="btn btn-success" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 				Voir mes dossiers
 			</a>
-			<a href="{{path("answer", {'id' : message.sender.id })}}" class="btn btn-primary">Répondre</a>
-			<a href="{{path("received")}}" class="btn btn-primary">Boite de réception</a>
+			<a href="{{path("answer", {'id' : message.sender.id })}}" class="btn btn-success">Répondre</a>
 		</div>
 	</div>
 </section>
@@ -28,7 +27,7 @@
 	</div>
 	<div class="offcanvas-body">
 		<div class="list-group">
-			<a href="{{ path("received") }}" class="list-group-item list-group-item-action active">Boîte de réception</a>
+			<a href="{{ path("received") }}" class="list-group-item list-group-item-action">Boîte de réception</a>
 		</div>
 		<div class="list-group">
 			<a href="{{ path("sent") }}" class="list-group-item list-group-item-action">Eléments envoyés</a>

@@ -103,6 +103,5 @@
             "allow-contrib": false,
             "require": "5.3.*"
         }
-    },
-    "post-install-cmd": [ "ln -sr storage/app/public public/storage" ]
+    }
 }

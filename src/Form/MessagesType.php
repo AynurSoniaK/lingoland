@@ -17,11 +17,13 @@ class MessagesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class)
+            ->add('title', TextType::class,[
+                "attr"=> ["label" => "Sujet"]
+            ])
             ->add('message', TextareaType::class)
 
-            ->add('envoyer', SubmitType::class,[
-                "attr"=> ["class" => "btn btn-primary"]
+           ->add('envoyer', SubmitType::class,[
+                "attr"=> ["class" => "btn btn-success messagerie-button"]
             ])
         ;
     }

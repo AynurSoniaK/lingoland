@@ -62,12 +62,12 @@ class RegistrationFormType extends AbstractType
             ->add('name',TextType::class, array('label'=>'Nom'))
             ->add('genre', EntityType::class,[
                 "class" => Genre::class,
-                'label'=>"Je suis un/une",
+                'label'=>"Je suis",
                 'multiple' => false,
                 "expanded" => true ])
             ->add('age',NumberType::class, array('label'=>'Age'))
             ->add('city',TextType::class, array('label'=>'Ville'))
-            ->add('introduction',TextType::class, array('label'=>'Présentez-vous en quelques phrases'))
+            ->add('introduction',TextType::class, array('label'=>'Présentez-vous en quelques phrases (150 caractères minimum)'))
             ->add('language',EntityType::class,[
                 'label'=>'Je parle',
                 "class" => Language::class,

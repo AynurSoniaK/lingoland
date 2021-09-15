@@ -223,3 +223,44 @@ img.flag{
     background-color:#FFFFFF !important;
     color:#F49819 !important;
   }
+
+.list-group-item-action:hover {
+    color: #F49819 !important;
+    border-color: #FFF !important;
+}
+
+.list-group-item-action {
+    z-index: 5;
+    color: #777777 !important;;
+    background-color:#FFFFFF !important;
+}
+
+.messagerie {
+    padding:20px 0px;
+    font-size: 30px;
+}
+
+.tableau-header{
+    font-size: 20px;
+    color: #22994C;
+}
+
+.messagerie-lien:hover{
+    color: #F49819 !important;
+    text-decoration: none;
+}
+
+.messagerie-button{
+    margin:10px 0 0 0 !important;
+}
+
+.btn-danger{
+    background-color: #F49819 !important;
+    border-color: none;
+}
+
+.btn-danger:hover{
+    background-color: #FFFFFF!important;
+    border-color: none;
+    color: #F49819 !important;
+}
