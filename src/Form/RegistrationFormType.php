@@ -101,7 +101,7 @@ class RegistrationFormType extends AbstractType
                 "expanded" => true ])
             ->add('photo', FileType::class, [
                 "required" => false,
-                'label'=>'Ajoutez une photo de profil',
+                'label'=>'Ajoutez une photo de profil de petite taille au format png ou jpg',
                 'constraints' => [
                     new File([
                             'mimeTypes' => [

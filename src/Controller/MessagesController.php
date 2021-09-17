@@ -38,7 +38,7 @@ class MessagesController extends AbstractController
             $em->persist($message);
             $em->flush();
 
-            $this->addFlash("message", "Message envoyé !.");
+            $this->addFlash("message", "Message envoyé !");
             return $this->redirectToRoute("messages");
         }
 
@@ -107,7 +107,7 @@ class MessagesController extends AbstractController
             $em->persist($message);
             $em->flush();
 
-            $this->addFlash("message", "Message envoyé !.");
+            $this->addFlash("message", "Message envoyé !");
             return $this->redirectToRoute("messages");
         }
 

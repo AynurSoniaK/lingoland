@@ -132,7 +132,6 @@ p{
 
 nav.bg-success{
     background-color: #E5E4E4 !important;
-    margin-bottom: 20px;
 }
 
 img.why{
@@ -175,10 +174,7 @@ h6{
 }
 
 .register{
-    border-radius: 50px;
-    border-color: #3007AF;
-    background-color: #3007AF;
-    margin: 5px;
+    color: #3007AF !important;
 }
 
 
@@ -282,12 +278,14 @@ img.flag{
     font-size: 20px;
     color: #22994C;
     border: 0.5px solid black !important;
-    text-align: center;
+    text-align: center !important;
     padding: 10px;
 }
 
 .tableau-item{
     text-align: center !important;
+    background-color: #E5E4E4;
+    padding: 10px;
 }
 
 .messagerie-lien:hover{

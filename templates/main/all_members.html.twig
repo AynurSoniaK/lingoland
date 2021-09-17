@@ -54,46 +54,49 @@
 		</div>
 		<div class="col-md-9">
 			{% if users is not empty %}
-				{% for user in users %}
-					<div class="card">
-						<div class="row">
-							<div class="col-md-6 col-ms-6 p-3">
-								<div><img class="img-fluid img-thumbnail" src="{{ asset('images/uploadphotos/' ~ user.photo) }}"></div>
-							</div>
-							<div class="col-md-6 col-ms-6 p-3 text-center">
-								<div>{{ user.name|title }},
-									{{ user.age}}
-									ans</div>
-								<div>
-									<div>Parle :
-										{% for languages in user.language %}
-											{{ languages|replace({"\n":' '}) }}
-											{% if not loop.last %},
-											{% endif %}
-										{% endfor %}
-									</div>
-									<div>Veut parler :
-										{% for languageslearned in user.languageLearned %}
-											{{ languageslearned|replace({"\n":' '}) }}
-											{% if not loop.last %},
-											{% endif %}
-										{% endfor %}
+					{% for user in users %}
+					{% if user != app.user %}
+						<div class="card">
+							<div class="row">
+								<div class="col-md-6 col-ms-6 p-3">
+									<div><img class="img-fluid img-thumbnail" src="{{ asset('images/uploadphotos/' ~ user.photo) }}"></div>
+								</div>
+								<div class="col-md-6 col-ms-6 p-3 text-center">
+									<div>{{ user.name|title }},
+										{{ user.age}}
+										ans</div>
 									<div>
-										<a class="btn btn-danger text-center" href="{{ path('fiche_membre' , {'id' : user.id } ) }}">Voir le profil complet</a>
-									</div>
+										<div>Parle :
+											{% for languages in user.language %}
+												{{ languages|replace({"\n":' '}) }}
+												{% if not loop.last %},
+												{% endif %}
+											{% endfor %}
+										</div>
+										<div>Veut parler :
+											{% for languageslearned in user.languageLearned %}
+												{{ languageslearned|replace({"\n":' '}) }}
+												{% if not loop.last %},
+												{% endif %}
+											{% endfor %}
+											<div>
+												<a class="btn btn-danger text-center" href="{{ path('fiche_membre' , {'id' : user.id } ) }}">Voir le profil complet</a>
+											</div>
 
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+						</div>{% endif %}
+					{% endfor %}
 				</div>
-			{% endfor %}
-		</div>
 
-	{% else %}
-		{# sinon le tableau user est vide #}
+			{% else %}
+				{# sinon le tableau user est vide #}
 
-		<h4 class="text-center mt-4 text-danger">Il n'y aucun membres pour le moment</h4>
+				<h4 class="text-center mt-4 text-danger">Il n'y aucun membres pour le moment</h4>
 
-	{% endif %}
-</div></div></div></div>{% endblock %}
+			{% endif %}
+		
+	</div>
+</div></div></div>{% endblock %}

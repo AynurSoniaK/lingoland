@@ -90,12 +90,10 @@ shrink-to-fit=no">
 					<ul class="navbar-nav ml-auto">
 
 						{% if not app.user %}
-
-							<li class="nav-item">
-								<button class="register btn btn-success"><a href="{{path('app_register')}}">Inscription</a></button>
-							</li>
-							<li class="nav-item">
-								<button class=" register btn btn-success"><a href="{{path('app_login')}}">Connexion</a></button>
+							<li><svg xmlns="http://www.w3.org/2000/svg" width="30" style="color:#3007AF" height="30" fill="currentColor" class="bi bi-person-fill m-1" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+						  <a class="register" href="{{path('app_login')}}">Se connecter</a><i class="bi bi-person-fill"></i>
 							</li>
 
 						{% else %}

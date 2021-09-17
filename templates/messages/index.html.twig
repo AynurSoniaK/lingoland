@@ -5,8 +5,12 @@
 
 {% block body %}
 	<section class="container">
+				{% for notification in app.flashes('message') %}
+					<div class="alert alert-success col-md-12 mx-auto text-center disparition">{{ notification }}</div>
+				{% endfor %}
 		<div class="row">
 			<div class="col">
+
 				<h1 class="messagerie">Résumé de la messagerie</h1>
 				<p>Reçus :
 					{{ app.user.received|length }}</p>
