@@ -8,12 +8,17 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="messagerie">Résumé de la messagerie</h1>
-				<p>Reçus : {{ app.user.received|length }}</p>
-				<p>Envoyés : {{ app.user.sent|length }}</p>
-				<a class="btn btn-success-success" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+				<p>Reçus :
+					{{ app.user.received|length }}</p>
+				<p>Envoyés :
+					{{ app.user.sent|length }}</p>
+				<a class="btn btn-success-success ml-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 					Voir mes dossiers
 				</a>
-                {#<a href="{{path("send")}}" class="btn btn-primary">Envoyer un message</a>#}
+				{#<a href="{{path("send")}}" class="btn btn-primary">Envoyer un message</a>#}
+			</div>
+			<div class="col-md-6">
+				<img src="{{ asset('images/mailbox2.jpg')}}" class="img-fluid" alt="Confirm_email">
 			</div>
 		</div>
 	</section>
@@ -25,14 +30,14 @@
 		</div>
 		<div class="offcanvas-body">
 			<div class="list-group">
-				<a href="{{path("received")}}" class="list-group-item list-group-item-action">Boîte de réception</a>
+				<a href="{{path("received")}}" class="list-group-item list-group-item-action border-0">Boîte de réception</a>
 			</div>
 			<div class="list-group">
-				<a href="{{path("sent")}}" class="list-group-item list-group-item-action">Elements envoyés</a>
+				<a href="{{path("sent")}}" class="list-group-item list-group-item-action border-0">Elements envoyés</a>
 			</div>
 			<div class="list-group">
-				<a href="{{path("messages")}}" class="list-group-item list-group-item-action">Elements supprimés</a>
+				<a href="{{path("messages")}}" class="list-group-item list-group-item-action border-0">Elements supprimés</a>
 			</div>
 		</div>
-    </div>
-	{% endblock %}
+	</div>
+{% endblock %}

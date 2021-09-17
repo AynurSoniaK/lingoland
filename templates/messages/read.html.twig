@@ -7,9 +7,11 @@
 <section class="container">
 	<div class="row">
 		<div class="col-12">
+			<div class="row">
+			<div class="col-md-6">
 			<h1 class="messagerie">{{ message.title }}</h1>
-			<p>Message de
-				{{ message.sender.name|title }}</p>
+			{#<p>Message de
+				{{ message.sender.name|title }}</p>#}
 			<p>Le
 				{{ message.createdAt|date }}</p>
 			<div>{{ message.message }}</div>
@@ -18,7 +20,10 @@
 			</a>
 			<a href="{{path("answer", {'id' : message.sender.id })}}" class="btn btn-success-success">Répondre</a>
 		</div>
-	</div>
+		<div class="col-md-6">
+				<img src="{{ asset('images/reading.jpg')}}"class="img-fluid pl-5" alt="Confirm_email">
+				</div>
+	</div></div>
 </section>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 	<div class="offcanvas-header">
@@ -27,13 +32,13 @@
 	</div>
 	<div class="offcanvas-body">
 		<div class="list-group">
-			<a href="{{ path("received") }}" class="list-group-item list-group-item-action">Boîte de réception</a>
+			<a href="{{ path("received") }}" class="list-group-item list-group-item-action border-0">Boîte de réception</a>
 		</div>
 		<div class="list-group">
-			<a href="{{ path("sent") }}" class="list-group-item list-group-item-action">Eléments envoyés</a>
+			<a href="{{ path("sent") }}" class="list-group-item list-group-item-action border-0">Eléments envoyés</a>
 		</div>
 		<div class="list-group">
-				<a href="{{path("messages")}}" class="list-group-item list-group-item-action">Elements supprimés</a>
+				<a href="{{path("messages")}}" class="list-group-item list-group-item-action border-0">Elements supprimés</a>
 			</div>
 	</div>
 </div>

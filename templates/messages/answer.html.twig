@@ -7,26 +7,28 @@
 	<section class="container">
 		<div class="row">
 			<div class="col">
-				<h1 class="messagerie">Répondre à {{user|title}}</h1>
 				<div class="row">
-				<div class="col-md-5">
-					{{ form_start(form) }}
-					{{ form_row(form.title) }}
-					{{ form_row(form.message) }}
-					<div class="row">
-						<div class="col-md-4">{{ form_row(form.envoyer) }}</div>
-						<div class="col-md-8">
-							<a class="btn btn-success-success pl-0 ml-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-								Voir mes dossiers
-							</a>
+					<div class="col-md-6">
+						<h1 class="messagerie">Répondre à
+							{{user|title}}</h1>
+						{{ form_start(form) }}
+						{{ form_row(form.title) }}
+						{{ form_row(form.message) }}
+						<div class="row">
+							<div class="col-md-4">{{ form_row(form.envoyer) }}</div>
+							<div class="col-md-8">
+								<a class="btn btn-success-success pl-0 ml-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+									Voir mes dossiers
+								</a>
+							</div>
 						</div>
+						{{ form_end(form) }}
 					</div>
-					{{ form_end(form) }}
+					<div class="col-md-6">
+						<img src="{{ asset('images/mailbox.jpg')}}" class="img-fluid pl-5" alt="Confirm_email">
+					</div>
 				</div>
-				<div class="col-md-5">
-				<img src="{{ asset('images/mail-sent.svg')}}"class="img-fluid" alt="Confirm_email">
-				</div>
-			</div></div>
+			</div>
 		</div>
 	</section>
 	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -36,13 +38,13 @@
 		</div>
 		<div class="offcanvas-body">
 			<div class="list-group">
-				<a href="{{ path("received") }}" class="list-group-item list-group-item-action">Boîte de réception</a>
+				<a href="{{ path("received") }}" class="list-group-item list-group-item-action border-0">Boîte de réception</a>
 			</div>
 			<div class="list-group">
-				<a href="{{ path("sent") }}" class="list-group-item list-group-item-action">Eléments envoyés</a>
+				<a href="{{ path("sent") }}" class="list-group-item list-group-item-action border-0">Eléments envoyés</a>
 			</div>
 			<div class="list-group">
-				<a href="{{path("messages")}}" class="list-group-item list-group-item-action">Elements supprimés</a>
+				<a href="{{path("messages")}}" class="list-group-item list-group-item-action border-0">Elements supprimés</a>
 			</div>
 		</div>
 	</div>

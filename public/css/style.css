@@ -63,8 +63,9 @@ h2{
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-    color:#22994C !important;
+    color:#F49819 !important;
 }
+
 
 .main_ban{
     background-image:url(/images/6.png);
@@ -79,6 +80,19 @@ h2{
 .textbanner{
     text-align: center;
     padding: 50px 10px;
+}
+
+.list-group-flush>.list-group-item {
+    border-width: 0 0 0px !important;
+    padding: 5px 30px 5px 40px !important;
+}
+
+img.list-group-item{
+    border-width: 0 0 0px !important;
+}
+
+.img-fluid{
+    border-width: 0 0 0px !important;
 }
 
 a{
@@ -114,6 +128,11 @@ li{
 p{
     padding-right: 20px;
     font-size: 20px
+}
+
+nav.bg-success{
+    background-color: #E5E4E4 !important;
+    margin-bottom: 20px;
 }
 
 img.why{
@@ -212,7 +231,7 @@ img.flag{
     font-size: 30px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
+    padding-left: 40px;
 }
 
 .bg-dark{
@@ -262,6 +281,13 @@ img.flag{
 .tableau-header{
     font-size: 20px;
     color: #22994C;
+    border: 0.5px solid black !important;
+    text-align: center;
+    padding: 10px;
+}
+
+.tableau-item{
+    text-align: center !important;
 }
 
 .messagerie-lien:hover{

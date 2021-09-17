@@ -12,29 +12,30 @@
 					{{ app.user.sent|length }}
 					message(s)</p>
 			</div>
-			<div class="col-3 tableau-header">Destinataire</div>
-			<div class="col-3 tableau-header">Sujet</div>
-			<div class="col-3 tableau-header">Date</div>
-			<div class="col-3 tableau-header">Supprimer</div>
-			{% for message in app.user.sent %}
-				{% set bold = "" %}
-				{% if message.isRead == 0 %}
-					{% set bold = "fw-bold" %}
-				{% endif %}
 
-				<div class="col-3 {{bold}}">
-					<a class="messagerie-lien" href="{{ path("read", {id: message.id}) }}">{{ message.recipient.name }}</a>
-				</div>
-				<div class="col-3 {{bold}}">{{ message.title }}
-				</div>
-				<div class="col-3 {{bold}}">{{ message.createdAt|date }}</div>
-				<div class="col-3">
-					<a class="messagerie-lien" href="{{ path("delete", {id: message.id}) }}">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash2" viewbox="0 0 16 16">
-							<path d="M14 3a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2zM3.215 4.207l1.493 8.957a1 1 0 0 0 .986.836h4.612a1 1 0 0 0 .986-.836l1.493-8.957C11.69 4.689 9.954 5 8 5c-1.954 0-3.69-.311-4.785-.793z"/>
-						</svg>
-					</a>
-				</div>
+				<div class="col-3 tableau-header">Destinataire</div>
+				<div class="col-3 tableau-header">Sujet</div>
+				<div class="col-3 tableau-header">Date</div>
+				<div class="col-3 tableau-header">Supprimer</div>
+				{% for message in app.user.sent %}
+					{% set bold = "" %}
+					{% if message.isRead == 0 %}
+						{% set bold = "fw-bold" %}
+					{% endif %}
+
+					<div class="col-3 {{bold}} tableau-item">
+						<a class="messagerie-lien" href="{{ path("read", {id: message.id}) }}">{{ message.recipient.name }}</a>
+					</div>
+					<div class="col-3 {{bold}} tableau-item">{{ message.title }}
+					</div>
+					<div class="col-3 {{bold}} tableau-item">{{ message.createdAt|date }}</div>
+					<div class="col-3 tableau-item">
+						<a class="messagerie-lien" href="{{ path("delete", {id: message.id}) }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash2" viewbox="0 0 16 16">
+								<path d="M14 3a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2zM3.215 4.207l1.493 8.957a1 1 0 0 0 .986.836h4.612a1 1 0 0 0 .986-.836l1.493-8.957C11.69 4.689 9.954 5 8 5c-1.954 0-3.69-.311-4.785-.793z"/>
+							</svg>
+						</a>
+					</div>
 			{% endfor %}
 
 			<div class="col-3">
@@ -53,13 +54,13 @@
 	</div>
 	<div class="offcanvas-body">
 		<div class="list-group">
-			<a href="{{path("received")}}" class="list-group-item list-group-item-action">Boîte de réception</a>
+			<a href="{{path("received")}}" class="list-group-item list-group-item-action border-0">Boîte de réception</a>
 		</div>
 		<div class="list-group">
-			<a href="{{path("sent")}}" class="list-group-item list-group-item-action">Elements envoyés</a>
+			<a href="{{path("sent")}}" class="list-group-item list-group-item-action border-0">Elements envoyés</a>
 		</div>
 		<div class="list-group">
-			<a href="{{path("messages")}}" class="list-group-item list-group-item-action">Elements supprimés</a>
+			<a href="{{path("messages")}}" class="list-group-item list-group-item-action border-0">Elements supprimés</a>
 		</div>
 	</div>
 </div>{% endblock %}
