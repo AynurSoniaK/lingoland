@@ -20,27 +20,50 @@ h2{
 }
 
 .btn-success{
-    background-color:#3007AF !important;
-    border-color:#3007AF !important;
+    background-color:#FFFFFF !important;
+    border-color:#FFFFFF !important;
     border-radius:50px !important;
-    padding: 10px 20px !important;
+    padding: 0px 0px !important;
+}
+
+.btn-success-success{
+    background-color:#3007AF !important;
+    border-color:#FFFFFF !important;
+    border-radius:50px !important;
+    padding: 20px 30px !important;
+    border-color:#3007AF !important;
+}
+
+.btn-success-success:hover{
+    background-color:#FFFFFF !important;
+    color:#3007AF !important;
+    border-radius:50px !important;
+    padding: 20px 30px !important;
 }
 
 .btn-success a {
     color: #FFFFFF !important;
+    padding: 20px 30px !important;
+    border-radius:50px !important;
+    background-color:#3007AF !important;
+    border-color:#3007AF !important;
 }
 
 .btn-success a:hover {
     text-decoration: none;
+    color:#3007AF !important;
+    background-color: #FFFFFF !important;
+    border:1px solid #3007AF;
+
 }
 
 .navbar-light .navbar-nav .nav-link{
     color:#5A5A5A !important;
-    font-family: Lato;
+    font-family: Lato !important;
 }
 
-.nav-link a:hover{
-    color:#F49819 !important;
+.navbar-light .navbar-nav .nav-link:hover{
+    color:#22994C !important;
 }
 
 .main_ban{
@@ -77,6 +100,7 @@ img{
 .btn-secondary{
     margin:30px 0;
     padding: 10px;
+    background-color: #F49819 !important;
 }
 
 ul{
@@ -134,16 +158,11 @@ h6{
 .register{
     border-radius: 50px;
     border-color: #3007AF;
+    background-color: #3007AF;
     margin: 5px;
-    color: #3007AF;
 }
 
-.login{
-    border-radius: 50px;
-    border-color: #3007AF;
-    margin: 5px;
-    color: #3007AF;
-}
+
 li.nav-item{
     padding:0px !important;
     text-decoration: none !important;
@@ -221,7 +240,7 @@ img.flag{
 
 .dropdown-menu a:hover {
     background-color:#FFFFFF !important;
-    color:#F49819 !important;
+    color:#22994C !important;
   }
 
 .list-group-item-action:hover {
@@ -246,12 +265,16 @@ img.flag{
 }
 
 .messagerie-lien:hover{
-    color: #F49819 !important;
+    color: #22994C !important;
     text-decoration: none;
 }
 
 .messagerie-button{
     margin:10px 0 0 0 !important;
+}
+
+.messagerie-button:hover{
+    color:#FFFFFF !important;
 }
 
 .btn-danger{
@@ -263,4 +286,18 @@ img.flag{
     background-color: #FFFFFF!important;
     border-color: none;
     color: #F49819 !important;
+}
+
+.centre{
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.fas{
+    padding-left: 20px !important;
+}
+
+.text-reset:hover{
+    text-decoration: none !important;
+    color:#22994C !important;
 }

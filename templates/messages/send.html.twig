@@ -8,11 +8,21 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="messagerie">Envoyer un message à {{user|title}}</h1>
-                {{ form(form) }}
-		
-				<a class="btn btn-success messagerie-button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-					Voir mes dossiers
-				</a>
+				<div class="col-md-5">
+					{{ form_start(form) }}
+
+					{{ form_row(form.title) }}
+					{{ form_row(form.message) }}
+					<div class="row">
+						<div class="col-md-4">{{ form_row(form.envoyer) }}</div>
+						<div class="col-md-8">
+							<a class="btn btn-success-success pl-0 ml-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+								Voir mes dossiers
+							</a>
+						</div>
+					</div>
+					{{ form_end(form) }}
+				</div>
 			</div>
 		</div>
 	</section>

@@ -80,7 +80,7 @@ shrink-to-fit=no">
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="{{path('all_members')}}">Trouver un partenaire</a>
+							<a class="nav-link" aria-current="page" href="{{path('all_members')}}">Trouver un partenaire</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Blog</a>
@@ -92,10 +92,10 @@ shrink-to-fit=no">
 						{% if not app.user %}
 
 							<li class="nav-item">
-								<button class="register"><a class="nav-link" href="{{path('app_register')}}">Inscription</a></button>
+								<button class="register btn btn-success"><a href="{{path('app_register')}}">Inscription</a></button>
 							</li>
 							<li class="nav-item">
-								<button class="login"><a class="nav-link" href="{{path('app_login')}}">Connexion</a></button>
+								<button class=" register btn btn-success"><a href="{{path('app_login')}}">Connexion</a></button>
 							</li>
 
 						{% else %}
@@ -178,19 +178,16 @@ shrink-to-fit=no">
     <!-- Right -->
     <div>
       <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-facebook-f" style="color:#22994C"></i>
       </a>
       <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
+        <i class="fab fa-twitter" style="color:#22994C"></i>
       </a>
       <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
+        <i class="fab fa-instagram"  style="color:#22994C"></i>
       </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
+            <a href="" class="me-4 text-reset">
+        <i class="fab fa-youtube"  style="color:#22994C"></i>
       </a>
     </div>
     <!-- Right -->

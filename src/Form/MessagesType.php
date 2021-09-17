@@ -18,12 +18,12 @@ class MessagesType extends AbstractType
     {
         $builder
             ->add('title', TextType::class,[
-                "attr"=> ["label" => "Sujet"]
+                "label" => "Sujet"
             ])
             ->add('message', TextareaType::class)
 
            ->add('envoyer', SubmitType::class,[
-                "attr"=> ["class" => "btn btn-success messagerie-button"]
+                "attr"=> ["class" => "btn btn-success-success pl-0 ml-0"]
             ])
         ;
     }

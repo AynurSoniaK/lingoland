@@ -13,10 +13,10 @@
 			<p>Le
 				{{ message.createdAt|date }}</p>
 			<div>{{ message.message }}</div>
-			<a class="btn btn-success" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+			<a class="btn btn-success-success" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 				Voir mes dossiers
 			</a>
-			<a href="{{path("answer", {'id' : message.sender.id })}}" class="btn btn-success">Répondre</a>
+			<a href="{{path("answer", {'id' : message.sender.id })}}" class="btn btn-success-success">Répondre</a>
 		</div>
 	</div>
 </section>
