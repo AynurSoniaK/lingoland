@@ -17,11 +17,11 @@
 			</div>
 		{% endif %}
 		<div class="container">
-			{% for notification in app.flashes('verify-success') %}
-		<div class="alert alert-success col-md-10 mx-auto text-center disparition">{{ notification }}</div>
-	{% endfor %}
 
 			<h1 class="text-center pt-4">Connexion</h1>
+						{% for notification in app.flashes('verify-success') %}
+		<div class="alert alert-success col-md-10 mx-auto text-center disparition">{{ notification }}</div>
+	{% endfor %}
 			<div class="text-center mx-auto" style="width: 300px">
 				<label for="inputEmail">Email</label>
 				<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus></div>

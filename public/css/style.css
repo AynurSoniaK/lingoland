@@ -242,7 +242,7 @@ img.flag{
     justify-content: center;
     align-items: center;
     padding-left: 40px;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .bg-dark{
@@ -340,4 +340,22 @@ img.flag{
 .text-reset:hover{
     text-decoration: none !important;
     color:#22994C !important;
+}
+
+.accordion-button{
+    font-size: 20px !important;
+    font-family: lato !important;
+    color: #888 !important;
+}
+
+.accordion-button:hover{
+    color: #F49819 !important;
+}
+
+.accordion-body{
+    font-family: lato !important;
+}
+
+.accordion-item{
+    border-bottom: 0.2px solid #F49819 !important;
 }

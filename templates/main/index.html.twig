@@ -17,16 +17,22 @@
 								<i class="far fa-check-circle" style="color:#3007AF"></i>
 								Inscription gratuite</li>
 							<li>
-								<i class="far fa-check-circle" style="color:#3007AF" ></i>
+								<i class="far fa-check-circle" style="color:#3007AF"></i>
 								Supports de communication disponibles</li>
 							<li>
 								<i class="far fa-check-circle" style="color:#3007AF"></i>
 								Apprentissage par la conversation</li>
 						</ul>
 					</div>
-					<button type="button" class="btn btn-success">
-						<a href="{{path('app_register')}}">Je m'inscris</a>
-					</button>
+					{% if app.user != true %}
+						<button type="button" class="btn btn-success">
+							<a href="{{path('app_register')}}">Je m'inscris</a>
+						</button>
+					{% else %}
+						<button type="button" class="btn btn-success">
+							<a href="{{path('all_members')}}">Je cherche un partenaire</a>
+						</button>
+					{% endif %}
 				</div>
 			</div>
 		</div>
@@ -125,4 +131,62 @@
 			</button>
 		</div>
 	</div>
-{% endblock %}
+			<h2>Foire aux questions
+		</h2>
+	<div class="accordion accordion-flush col-md-8 mx-auto" id="accordionFlushExample">
+		<div class="accordion-item">
+			<h3 class="accordion-header" id="flush-headingOne">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					L'application est-elle payante ?
+				</button>
+			</h3>
+			<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">L'inscription et l'utilisation de l'application est gratuite. Une version payante sera bientôt disponible, offrant plus de functionnalités comme l'utilisation d'un chat instantané avec un système de correction intégré.</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h3 class="accordion-header" id="flush-headingTwo">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+					Comment trouver un partenaire linguistique une fois inscrit ?
+				</button>
+			</h3>
+			<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">Un fois inscrit, il suffit de vous connecter avec vos identifiants et de cliquer sur l'onglet "trouver un partenaire" dans le menu principal. La page qui liste l'ensemble des membres du site s'affichera et vous pourrez ensuite filtrer les résultats de recherche.
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h3 class="accordion-header" id="flush-headingThree">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+					Comment contacter un membre ?
+				</button>
+			</h3>
+			<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">Pour contacter un membre, cliquez sur "voir le profil" puis sur "contacter" sous la photo de profil. Vous serez ensuite redirigé sur le système de messagerie intégré où vous pourrez taper votre message et l'envoyer.
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h3 class="accordion-header" id="flush-headingFour">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+					Quel moyen de communication utiliser ?
+				</button>
+			</h3>
+			<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">Après avoir contacté un membre, si celui-ci est disponible, vous devez établir ensemble le mode de communication que vous souhaitez utiliser pour faire la session d'échange linguistique (mail, chat ou face-à-face)
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h3 class="accordion-header" id="flush-headingFive">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+					Comment se passe un échange linguistique ?
+				</button>
+			</h3>
+			<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">C'est à vous de le définir. En général, une session dure une heure, vous pratiquez les 30 premières minutes puis votre partenaire les 30 dernières. Avec Lingoland, vous aurez accès à des supports de conversation à utiliser durant les sessions si vous le souhaitez.
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
