@@ -254,14 +254,23 @@ img.flag{
     font-size: 30px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .btn-success2{
     background-color:#22994C !important;
     border-color:#22994C !important;
     border-radius:50px !important;
-    padding: 10px 20px !important;
+    padding: 20px 30px !important;
+}
+
+.btn-success2:hover{
+    color:#22994C !important;
+    border-color:#22994C !important;
+    border-radius:50px !important;
+    padding: 20px 30px !important;
+    background-color: #FFFFFF !important;
 }
 
 .far {
