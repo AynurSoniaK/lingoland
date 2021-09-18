@@ -57,6 +57,18 @@ h2{
 
 }
 
+.btn-success2 a:hover {
+    text-decoration: none;
+    color:#22994C !important;
+    background-color: #FFFFFF !important;
+    border:1px solid #22994C;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #F49819;
+}
+
 .navbar-light .navbar-nav .nav-link{
     color:#5A5A5A !important;
     font-family: Lato !important;
@@ -177,6 +189,11 @@ h6{
     color: #3007AF !important;
 }
 
+a.register:hover{
+    text-decoration: none;
+    color : #F49819 !important;
+}
+
 
 li.nav-item{
     padding:0px !important;
@@ -187,9 +204,6 @@ a.nav-item{
     text-decoration: none !important;
 }
 
-ul.login a:hover{
-    color:red !important;
-}
 
 legend,label{
     font-family: lato !important;
@@ -228,6 +242,7 @@ img.flag{
     justify-content: center;
     align-items: center;
     padding-left: 40px;
+    margin: 20px;
 }
 
 .bg-dark{
@@ -279,13 +294,14 @@ img.flag{
     color: #22994C;
     border: 0.5px solid black !important;
     text-align: center !important;
-    padding: 10px;
+    padding: 5px;
 }
 
 .tableau-item{
     text-align: center !important;
     background-color: #E5E4E4;
     padding: 10px;
+    font-size: 15px !important;
 }
 
 .messagerie-lien:hover{

@@ -15,11 +15,13 @@
 			<p>Le
 				{{ message.createdAt|date }}</p>
 			<div>{{ message.message }}</div>
-			<a class="btn btn-success-success" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+			<a class="btn btn-success-success ml-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 				Voir mes dossiers
 			</a>
+
+			{% if message.sender != app.user %}
 			<a href="{{path("answer", {'id' : message.sender.id })}}" class="btn btn-success-success">Répondre</a>
-		</div>
+		</div> {% endif %}
 		<div class="col-md-6">
 				<img src="{{ asset('images/reading.jpg')}}"class="img-fluid pl-5" alt="Confirm_email">
 				</div>
