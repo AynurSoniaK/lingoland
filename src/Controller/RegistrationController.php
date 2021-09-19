@@ -77,6 +77,9 @@ class RegistrationController extends AbstractController
             } 
 
 
+            
+
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
@@ -102,7 +105,7 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/verify/email", name="app_verify_email")
      */
-    public function verifyUserEmail(Request $request): Response
+    public function verifyUserEmail(Request $request ): Response
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
@@ -116,7 +119,7 @@ class RegistrationController extends AbstractController
         }
 
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
-        $this->addFlash('verify-success', 'Email vérifié ! Vous pouvez vous connecter =)');
+        $this->addFlash('verify-success', "Email vérifié ! Connectez-vous pour trouver un partenaire !");
 
         if($this->isGranted('ROLE_ADMIN'))
         {

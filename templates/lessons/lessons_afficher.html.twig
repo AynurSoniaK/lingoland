@@ -9,7 +9,7 @@
 	<h1 class="h1_profil col-md-12 d-flex justify-content">Gestion des leçons</h1>
 
 	{% for notification in app.flashes('success') %}
-		<div class="alert alert-success col-md-10 mx-auto text-center disparition">{{ notification }}</div>
+		<div class="alert alert-success col-md-5 mx-auto text-center disparition">{{ notification }}</div>
 	{% endfor %}
 
 	{% if lesson %}
@@ -79,6 +79,6 @@
 </div>
 
 		<div class="d-flex justify-content-end col-md-10 mx-auto">
-			<a class='col-md-3 me-0  btn btn-success' href="{{ path('lessons_ajouter') }}">Ajouter une leçon</a>
+			<a class='col-md-3 me-0  btn btn-success-success' href="{{ path('lessons_ajouter') }}">Ajouter une leçon</a>
 			</div>
 {% endblock %}

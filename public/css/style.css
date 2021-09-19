@@ -368,3 +368,13 @@ img.flag{
 .accordion-item{
     border-bottom: 0.2px solid #F49819 !important;
 }
+
+.alert-danger{
+    background-color: #F49819 !important;
+    text-align: center;
+}
+
+.alert-success{
+    background-color: #22994C !important;
+
+}
