@@ -60,7 +60,6 @@ class SearchForm extends AbstractType
                     'class' => Genre::class,
                     'expanded' => true,
                     'multiple' => true,
-                    'mapped' => false,
                 ]
             )
             ->add('ageMin', NumberType::class,[
