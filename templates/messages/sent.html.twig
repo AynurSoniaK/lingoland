@@ -13,10 +13,10 @@
 					message(s)</p>
 			</div>
 
-				<div class="col-3 tableau-header">Destinataire</div>
+				<div class="col-3 tableau-header">A</div>
 				<div class="col-3 tableau-header">Sujet</div>
 				<div class="col-3 tableau-header">Date</div>
-				<div class="col-3 tableau-header">Supprimer</div>
+				<div class="col-3 tableau-header">Effacer</div>
 				{% for message in app.user.sent %}
 					{% set bold = "" %}
 					{% if message.isRead == 0 %}
