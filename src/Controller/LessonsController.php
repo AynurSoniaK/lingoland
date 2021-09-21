@@ -33,57 +33,50 @@ class LessonsController extends AbstractController
      */
     public function lessons_ajouter_modifier(Lessons $lessons = null, Request $request, EntityManagerInterface $manager)
     {
-        if(!$lessons)
-        {
+        if (!$lessons) {
             $lessons = new Lessons;
         }
-        
+
         $form = $this->createForm(lessonsType::class, $lessons);
 
-        $form->handleRequest($request); 
+        $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid())
-        {
+        if ($form->isSubmitted() && $form->isValid()) {
             $modif = $lessons->getId() !== null;
             $lessonFile = $form->get('lesson')->getData();
             $fileName = date("YmdHis") . "-" . uniqid() . "-" . $lessonFile->getClientOriginalName();
-            $lessonFile->move($this->getParameter('lessons_directory'),$fileName);
-            if(!empty($lessons->getLesson() ))
-                {
-                    unlink($this->getParameter('lessons_directory') .'/'. $lessons->getlesson());
-                }
-                
-            $lessons->setLesson($fileName);
-            $manager->persist($lessons); 
-            $manager->flush(); 
+            $lessonFile->move($this->getParameter('lessons_directory'), $fileName);
+            if (!empty($lessons->getLesson())) {
+                unlink($this->getParameter('lessons_directory') . '/' . $lessons->getlesson());
+            }
 
-            $this->addFlash('success', ($modif) ? "La leçon " . $lessons->getTitle() ." a bien été modifiée" : "La leçon " . $lessons->getTitle() ." a bien été ajoutée");
+            $lessons->setLesson($fileName);
+            $manager->persist($lessons);
+            $manager->flush();
+
+            $this->addFlash('success', ($modif) ? "La leçon " . $lessons->getTitle() . " a bien été modifiée" : "La leçon " . $lessons->getTitle() . " a bien été ajoutée");
 
             return $this->redirectToRoute("lessons_afficher");
-
         }
-        
+
 
         return $this->render('lessons/lessons_ajouter_modifier.html.twig', [
-            "formLessons" => $form->createView(), 
+            "formLessons" => $form->createView(),
             "lessons" => $lessons,
             "modification" => $lessons->getId() !== null
         ]);
     }
 
-     /**
+    /**
      * @Route("/gestion_lessons/supprimer/{id}", name="lessons_supprimer")
      */
     public function lessons_supprimer(Lessons $lessons, EntityManagerInterface $manager)
     {
 
-
-
         $nomLessons = $lessons->getTitle();
         $idLessons = $lessons->getId();
-        if(!empty($lessons->getLesson() ))
-        {
-            unlink($this->getParameter('lessons_directory') .'/'. $lessons->getlesson());
+        if (!empty($lessons->getLesson())) {
+            unlink($this->getParameter('lessons_directory') . '/' . $lessons->getlesson());
         }
 
         $manager->remove($lessons);
@@ -93,8 +86,5 @@ class LessonsController extends AbstractController
         $this->addFlash('success', "La disponibilité $nomLessons a bien été supprimée");
 
         return $this->redirectToRoute("lessons_afficher");
-
-
     }
-
 }

@@ -119,14 +119,14 @@ class RegistrationController extends AbstractController
         }
 
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
-        $this->addFlash('verify-success', "Email vérifié ! Connectez-vous pour trouver un partenaire !");
+        $this->addFlash('verify-success', "Email vérifié !");
 
         if($this->isGranted('ROLE_ADMIN'))
         {
             return $this->redirectToRoute('admin');
         }
 
-        return $this->redirectToRoute('member_profile');
+        return $this->redirectToRoute('main');
     }
 
     /**

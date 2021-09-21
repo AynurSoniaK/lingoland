@@ -4,7 +4,9 @@
 {% endblock %}
 
 {% block body %}
-
+	{% for notification in app.flashes('verify-success') %}
+		<div class="alert alert-success col-md-6 mx-auto text-center disparition">{{ notification }}</div>
+	{% endfor %}
 	<div class="container-fluid mx-auto p-0">
 		<div class="main_ban img-fluid">
 			<div class="row align-items-center mx-auto">

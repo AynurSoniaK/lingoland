@@ -53,9 +53,10 @@ class SecurityController extends AbstractController
         }
         elseif($this->isGranted('ROLE_USER'))
         {
-            return $this->redirectToRoute('member_profile');
+            return $this->redirectToRoute('main');
         }
     }
+    
 }
 
 

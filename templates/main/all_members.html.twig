@@ -17,13 +17,12 @@
 {% block body %}
 
 	<div class="container">
-
 		<h1 class="h1_profil col-md-12 d-flex justify-content">Tous les membres
 		</h1>
 	</br>
 
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-3 mx-auto text-center">
 			{{ form_start(form, {attr: {class: 'filter'}})}}
 			{{form_row(form.q)}}
 
@@ -46,17 +45,17 @@
 				</div>
 			</div>
 
-			<div class="col-md-6 centre">
+			<div class="col-md-6 mx-auto text-center p-2">
 				<button type="submit" class="btn btn-danger text-center centre">Filtrer</button>
 			</div>
 			{{ form_end(form)}}
+			</div>
 
-		</div>
-		<div class="col-md-9">
+		<div class="col-md-9 border-0">
 			{% if users is not empty %}
 					{% for user in users %}
 					{% if user != app.user %}
-						<div class="card">
+						<div class="card border-0">
 							<div class="row">
 								<div class="col-md-6 col-ms-6 p-3">
 									<div><img class="img-fluid img-thumbnail" src="{{ asset('images/uploadphotos/' ~ user.photo) }}"></div>

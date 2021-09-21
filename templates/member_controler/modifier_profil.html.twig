@@ -5,25 +5,24 @@
 
 {% block body %}
 
-	<h1>Modifier profil</h1>
+	<div class="col-md-10 mx-auto">
 
-	<div class="col-md-12 mx-auto">
-
+		<h1 class="h1_profil text-center p-2">Modifier profil</h1>
 		{{ form_start(modifier_profilForm) }}
 
 		<div class="row">
 
-			<div class="col-md-4">
+			<div class="col-md-3">
 				{{ form_row(modifier_profilForm.name) }}
 			</div>
-			<div class="col-md-4">
-				{{ form_row(modifier_profilForm.genre) }}
-			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				{{ form_row(modifier_profilForm.age) }}
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				{{ form_row(modifier_profilForm.city) }}
+			</div>
+			<div class="col-md-3">
+				{{ form_row(modifier_profilForm.genre) }}
 			</div>
 		</div>
 

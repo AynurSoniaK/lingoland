@@ -4,9 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	{% for notification in app.flashes('verify-success') %}
-		<div class="alert alert-success col-md-10 mx-auto text-center disparition">{{ notification }}</div>
-	{% endfor %}
+
 	<form method="post">
 		{% if error %}
 			<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
